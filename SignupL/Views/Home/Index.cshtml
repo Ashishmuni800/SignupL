@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.Raw(TempData["LoginSuccessMessage"])
+<h2>Welcome To @Session["Username"]</h2>
+<h4>@Html.ActionLink("Logout here", "Index", "Login")</h4>

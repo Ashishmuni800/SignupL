@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+}
+
+@Html.Raw(ViewBag.ErrorMessage)
+
+<div class="row" style="margin-top: 40px;">
+    <div class="col-md-6 offset-3">
+        <div class="card">
+            <div class="card-header">
+                <h4>Signup</h4>
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("Signup", "Login", FormMethod.Post))
+                {
+
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" name="firstName" />
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" name="lastName" />
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="text" class="form-control" name="gender" />
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" class="form-control" name="age" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" />
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" class="form-control" name="password" />
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="text" class="form-control" name="Confirm_password" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Signup</button>
+                    </div>
+                    @Html.ActionLink("Login to? Click here", "Index")
+                }
+            </div>
+        </div>
+    </div>
+</div>
